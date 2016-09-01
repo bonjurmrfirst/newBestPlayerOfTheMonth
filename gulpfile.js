@@ -22,6 +22,9 @@ gulp.task('browser-sync', ['scripts'], function() {
 gulp.task('scripts', function() {
   return gulp.src([
     './bower/angular/angular.min.js',
+    './bower/angular-ui-router/release/angular-ui-router.min.js',
+    './bower/jquery/dist/jquery.min.js',
+    './bower/angular-translate/angular-translate.min.js',
 
     './js/**/*.js'
   ])
@@ -46,7 +49,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('sass/*.sass', ['styles']);
+  gulp.watch('sass/**/*.sass', ['styles']);
   gulp.watch('js/**/*.js', ['scripts']);
   gulp.watch('js/**/*.js').on("change", browserSync.reload);
   gulp.watch('app/**/*.html').on('change', browserSync.reload);

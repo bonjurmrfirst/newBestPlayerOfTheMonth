@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru" ng-app> <!-- /lang="en"/... [class="no-js"] -->
+<html lang="ru" ng-app="newPlayerOfTheMonth"> <!-- /lang="en"/... [class="no-js"] -->
 <head>
     <meta charset="UTF-8">
 
-    <title>Best Player Of the Month</title>
+    <title>{{'TITLE' | translate}}</title>
     <meta name="description" content=""> <!-- [content text] -->
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,12 +29,11 @@
 
     <script src="lib/lib.js"></script> <!-- is page not fully dynamic? (then move behind </body>) -->
 </head>
-<body>
+<body ng-controller="MainCtrl">
 
 <!-- HTML here -->
-<h1>{{0.2 + 0.2}}</h1>
-<p><a href="#">12345</a></p>
-<img src="http://cdn.skilledup.com/wp-content/uploads/2014/11/javascript-pay-graph-screenshot.jpg" alt="img">
+<ng-include src="'partials/nav.html'"></ng-include>
+<div ui-view></div>
 
 <!-- Alerts, etc.
 <div class="hidden"></div>

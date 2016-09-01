@@ -1,0 +1,36 @@
+<nav datanav="nav" ng-click="">
+    <span class="brand">
+        <a href="http://shakhtar.com">shakhtar.com</a>
+    </span>
+
+    <ul class="nav-elements">
+        <li>
+            <img src="img/bigger.png" alt="bigger">
+        </li>
+        <li>
+            <img src="img/smaller.png" alt="smaller">
+        </li>
+        <li datanav="sort">
+            <span>{{'SORT' | translate}}</span>
+        </li>
+        <li datanav="lang">
+            <span class="lang">{{'LANGUAGE' | translate}}</span>
+        </li>
+    </ul>
+    <div ng-show='navSubMenu.sort' class="nav-sub-menu-sort">
+        <span>Sort by: </span>
+        <span class="matches-played">Matches played</span>
+        <span> | </span>
+        <span class="minutes-played">Minutes played</span>
+        <span> | </span>
+        <span class="a-z">A-z</span>
+    </div>
+    <div ng-show='navSubMenu.lang' class="nav-sub-menu-lang">
+        <span>Language: </span>
+        <span class="lang-en" ng-click="changeLanguage('en')">English</span>
+        <span> | </span>
+        <span class="lang-ua" ng-click="changeLanguage('ua')">Ukrainian</span>
+        <span> | </span>
+        <span class="lang-ru" ng-click="changeLanguage('ru')">Russian</span>
+    </div>
+</nav>

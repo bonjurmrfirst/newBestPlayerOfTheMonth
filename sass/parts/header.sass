@@ -6,8 +6,91 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.6
-	font-family: "RobotoRegular", sans-serif
+	font-family: "OfficinaSerifBookC", sans-serif
 	overflow-x: hidden
 
 .hidden
 	display: none
+
+a
+	color: $whiteColor
+
+nav
+	position: fixed
+	width: 100%
+	height: 100px
+	background-color: $blackColor
+	color: $whiteColor
+	line-height: 100px
+	font-family: "OfficinaSerifMediumC", sans-serif
+
+	.brand
+		margin-left: 20px
+		font-size: em(22)
+		min-width: 130px
+		letter-spacing: 3px
+		a
+			color: white
+		a:hover
+			color: $orangeColor
+			transition: 0.3s
+
+	.nav-elements
+		float: right
+		font-size: 0
+
+		li
+			font-size: 16px
+			cursor: pointer
+			display: inline-block
+			padding: 0 0 0 0
+			width: 100px
+			text-align: center
+			&:hover
+				background-color: $orangeColor
+				padding: 0 0 0 0
+				transition: 0.5s
+
+			&:last-child
+				padding: 0 10px 0 0
+				&:hover
+					background-color: $orangeColor
+					transition: 0.5s
+
+			img
+				vertical-align: middle
+				margin-bottom: 20px
+				display: inline
+				height: 45px
+
+	.nav-sub-menu-sort
+		position: fixed
+		font-family: "OfficinaSerifBookC", sans-serif
+		font-size: em(14)
+		padding: 0 10px 0 10px
+		margin-top: -2px
+		height: 20px
+		line-height: 20px
+		right: 0
+		background-color: $blackColor
+
+		.matches-played, .minutes-played, .a-z
+			&:hover
+				color: $orangeColor
+				cursor: pointer
+
+	.nav-sub-menu-lang
+		position: fixed
+		font-family: "OfficinaSerifBookC", sans-serif
+		font-size: em(14)
+		padding: 0 10px 0 10px
+		margin-top: -2px
+		height: 20px
+		line-height: 20px
+		right: 0
+		background-color: $blackColor
+
+		.lang-en, .lang-ua, .lang-ru
+			&:hover
+				color: $orangeColor
+				cursor: pointer
